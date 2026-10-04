@@ -19,7 +19,8 @@ We term this **zero-shot cross-domain time series reconstruction**, a task funda
 <div align="center">
     <img width="840" alt="framework" src="assets/framework.png"/>
 </div>
-<p align="center"><em>Diffusion-based calibration with an informed prior. <b>Top (training):</b> at an observed location k, the forward process diffuses the target Y<sub>0</sub><sup>(k)</sup> toward the informed prior N(Ŷ<sup>(k)</sup>, σ̄<sub>T</sub>I) &mdash; built from the Stage-1 moment and dynamics estimates &mdash; rather than toward pure noise, and the reverse process trains a denoiser ε<sub>θ</sub> to undo it. <b>Bottom (inference):</b> at an unobserved location j, the same shared denoiser starts from N(Ŷ<sup>(j)</sup>, σ̄<sub>T</sub>I) and runs the reverse process to produce the calibrated reconstruction Y<sub>0</sub><sup>(j)</sup>. Because the chain starts from the prior instead of noise, the model calibrates the prior rather than generating from scratch.</em></p>
+
+**Diffusion-based calibration with an informed prior.** *Top (training):* at an observed location $k$, the forward process diffuses the target $\mathbf{Y}_0^{(k)}$ toward the informed prior $\mathcal{N}(\hat{\mathbf{Y}}^{(k)}, \bar{\sigma}_T \mathbf{I})$, built from the Stage-1 moment and dynamics estimates, rather than toward pure noise; the reverse process trains a denoiser $\epsilon_\theta$ to undo it. *Bottom (inference):* at an unobserved location $j$, the same shared denoiser starts from $\mathcal{N}(\hat{\mathbf{Y}}^{(j)}, \bar{\sigma}_T \mathbf{I})$ and runs the reverse process to produce the calibrated reconstruction $\mathbf{Y}_0^{(j)}$. Because the chain starts from the prior instead of noise, the model calibrates rather than generates from scratch.
 
 ZeroDiff operates in two stages:
 
