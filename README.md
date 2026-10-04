@@ -19,7 +19,7 @@ We term this **zero-shot cross-domain time series reconstruction**, a task funda
 <div align="center">
     <img width="840" alt="framework" src="assets/framework.png"/>
 </div>
-<p align="center"><em>The diffusion process starts from the informed prior N(Ŷ, σ̄<sub>T</sub>I) rather than pure noise, enabling calibration instead of generation. The denoiser is trained on observed locations (top) and applied to unobserved locations (bottom), where the prior Ŷ is obtained from exogenous inputs via moment estimation (VAE) and dynamics learning.</em></p>
+<p><em>The diffusion process starts from the informed prior N(Ŷ, σ̄<sub>T</sub>I) rather than pure noise, enabling calibration instead of generation. The denoiser is trained on observed locations (top) and applied to unobserved locations (bottom), where the prior Ŷ is obtained from exogenous inputs via moment estimation (VAE) and dynamics learning.</em></p>
 
 ZeroDiff operates in two stages:
 
