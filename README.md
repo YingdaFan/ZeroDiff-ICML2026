@@ -19,7 +19,7 @@ We term this **zero-shot cross-domain time series reconstruction**, a task funda
 <div align="center">
     <img width="840" alt="framework" src="assets/framework.png"/>
 </div>
-<p align="center"><em>The informed prior combines moment estimation (VAE) with dynamics learning. The diffusion process starts from N(Ŷ, σ̄<sub>T</sub>I) rather than pure noise, enabling calibration instead of generation. Estimated moments also guide optimization by weighting training locations based on their proximity to the target in moment space.</em></p>
+<p align="center"><em>Diffusion-based calibration with an informed prior. <b>Top (training):</b> at an observed location k, the forward process diffuses the target Y<sub>0</sub><sup>(k)</sup> toward the informed prior N(Ŷ<sup>(k)</sup>, σ̄<sub>T</sub>I) &mdash; built from the Stage-1 moment and dynamics estimates &mdash; rather than toward pure noise, and the reverse process trains a denoiser ε<sub>θ</sub> to undo it. <b>Bottom (inference):</b> at an unobserved location j, the same shared denoiser starts from N(Ŷ<sup>(j)</sup>, σ̄<sub>T</sub>I) and runs the reverse process to produce the calibrated reconstruction Y<sub>0</sub><sup>(j)</sup>. Because the chain starts from the prior instead of noise, the model calibrates the prior rather than generating from scratch.</em></p>
 
 ZeroDiff operates in two stages:
 
