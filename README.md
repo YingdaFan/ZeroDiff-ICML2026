@@ -1,6 +1,6 @@
 # ZeroDiff: Zero-Shot Time Series Reconstruction via Informed-Prior Diffusion
 
-**[ICML 2026]**
+**[ICML 2026]** &nbsp;|&nbsp; [PMLR](https://proceedings.mlr.press/v306/fan26d.html) &nbsp;|&nbsp; [arXiv:2609.37078](https://arxiv.org/abs/2609.37078)
 
 Yingda Fan<sup>1</sup>, Dan Lu<sup>2</sup>, Xiaowei Jia<sup>1</sup>
 
@@ -152,8 +152,6 @@ If you find this work useful, please cite:
 }
 ```
 
-> *The bibtex will be updated with the official PMLR volume, pages, and URL once the proceedings are published.*
-
 ## References
 
 Parts of the code architecture are based on:
@@ -162,7 +160,7 @@ Parts of the code architecture are based on:
 
 ## Contact
 
-For questions or feedback, please open an [issue](https://github.com/YingdaFan/ZeroDiff/issues) or contact Yingda Fan (yf474@rutgers.edu).
+For questions or feedback, please open an [issue](https://github.com/YingdaFan/ZeroDiff-ICML2026/issues) or contact Yingda Fan (yf474@rutgers.edu).
 
 ## License
 
